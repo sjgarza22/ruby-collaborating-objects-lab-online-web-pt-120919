@@ -22,7 +22,7 @@ class Song
     song.artist_name = song_info[0]
   end
 
-  def artist_name(name)
+  def artist_name=(name)
     if Artist.find_by_name(name) != nil
       self.artist = Artist.find_by_name(name)
     else
